@@ -10,6 +10,7 @@ on:
 
 env:
   DEV_JSON: ${{secrets.DEV_JSON}}
+  CI: false
 
 jobs:
   build:
