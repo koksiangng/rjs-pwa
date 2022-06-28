@@ -6,7 +6,7 @@ import fw from './api/fetchWeather.js';
 
 const App = () => {
     return(
-        <h1>Habla {fw.v}</h1>
+        <h1>Something</h1>
         //<h1>Something {s.weatherkey}</h1>
         //<h1>Something {fw.v}</h1>
     )
