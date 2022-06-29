@@ -1,7 +1,9 @@
 import axios from "axios";
 import secrets from "./secrets.json";
 
-const v = secrets.weatherkey;
-//const fetchWeatherFrom = async()
+const key = secrets.weatherkey;
+var URL = secrets.weatherweb;
+
+const data = axios.get()
 
 export default {v};

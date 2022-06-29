@@ -28,12 +28,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+
       #Using secret for file
       - name: Write secrets.json
         run: |
           touch src/api/secrets.json
           echo $DEV_JSON >> src/api/secrets.json
           cat src/api/secrets.json
+
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
