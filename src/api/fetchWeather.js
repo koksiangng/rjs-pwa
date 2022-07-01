@@ -1,9 +1,17 @@
 import axios from "axios";
 import secrets from "./secrets.json";
 
-const key = secrets.weatherkey;
+const KEY = secrets.weatherkey;
 var URL = secrets.weatherweb;
 
-const data = axios.get()
+export const weatherData = async(query) => {
+    const {data} = await axios.get(URL, {
+        params: {
+            q: query,
+            units: 'metric',
+            APPID: KEY,
+        }
+    });
 
-export default {v};
+    return data;
+}
